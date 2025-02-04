@@ -3,21 +3,22 @@ import java.util.Scanner;
 public class Nota {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int nota;
-        boolean acaba = false;
         System.out.println("Añade un nota,toca -1 para salir");
-        do {
-            System.out.println("Añade una nota");
-            nota = in.nextInt();
-            if (nota == -1) {
-                acaba = true;
-            } else if (nota >= 5) {
+        int nota=in.nextInt();
+        notas(nota);
+    }
+    public static int notas(int nota){
+
+            if (nota >=5 && nota<=6) {
                 System.out.println("Suficiente");
+            } else if (nota>=7 &&nota<=8) {
+                System.out.println("notable");
+            } else if (nota >=9 && nota <=10) {
+                System.out.println("sobresaliente");
             } else {
                 System.out.println("Insuficiente");
             }
-        } while (!acaba);
-        System.out.println("adios");
 
+        return nota;
     }
 }

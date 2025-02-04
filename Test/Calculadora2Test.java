@@ -12,6 +12,35 @@ class Calculadora2Test {
     }
 
     @Test
+    public void testSuma() {
+        System.out.println("suma");
+        int a = 1;
+        int b = 2;
+        int expResult = 3;
+        int result = Calculadora.suma(a, b);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testSuma_1() {
+        System.out.println("suma");
+        int a = -2;
+        int b = -5;
+        int expResult = -7;
+        int result = Calculadora.suma(a, b);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testResta() {
+        System.out.println("resta");
+        int a = 0;
+        int b = 0;
+        int expResult = 0;
+        int result = Calculadora.resta(a, b);
+        assertEquals(expResult, result);
+    }
+    @Test
     void testMultiplicacion() {
         int a=2, b=3;
         System.out.println("Multiplicacion");
